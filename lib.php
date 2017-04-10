@@ -139,7 +139,7 @@ function newmodule_refresh_events($courseid = 0) {
 
     foreach ($newmodules as $newmodule) {
         // Create a function such as the one below to deal with updating calendar events.
-        // newmodule_update_events($newmodule);
+        newmodule_update_events($newmodule);
     }
 
     return true;
@@ -476,5 +476,18 @@ function newmodule_extend_navigation(navigation_node $navref, stdClass $course, 
  * @param navigation_node $newmodulenode newmodule administration node
  */
 function newmodule_extend_settings_navigation(settings_navigation $settingsnav, navigation_node $newmodulenode=null) {
+    // TODO Delete this function and its docblock, or implement it.
+}
+
+/**
+ * This function updates the events associated to the newmodule.
+ * If $override is non-zero, then it updates only the events
+ * associated with the specified override.
+ *
+ * @uses NEWMODULE_MAX_EVENT_LENGTH
+ * @param object $newmodule the quiz object.
+ * @param object optional $override limit to a specific override
+ */
+function newmodule_update_events($newmodule, $override = null) {
     // TODO Delete this function and its docblock, or implement it.
 }
